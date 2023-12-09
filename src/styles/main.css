@@ -82,7 +82,10 @@ h2 {
     transform: rotateY(0deg);
     backface-visibility: hidden;
     border-radius: 5%;
-}
+}    <div class="score">
+<span>Melhores tentativas:</span>
+<p id="pontuacao"></p>
+</div> 
 
 .item.boxOpen{
     transform: rotateY(0deg);
@@ -100,7 +103,16 @@ h2 {
     position: fixed;
     top: 0;   
     right: 0; 
-    background-color: #c55e5e; /* Adicione uma cor de fundo se desejar */
+    background-color: #805ec5; /* Adicione uma cor de fundo se desejar */
     padding: 10px; /* Adicione padding se desejar */
     margin: 10px;
+}
+
+.score span {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: 900;
+    font-size: 1.4rem;
+    
 }
