@@ -46,6 +46,10 @@ const createCards = function() {
     }
 }
 
+const resetGame = function () {
+    window.location.reload();
+}
+
 const handleClick = function() {
     // Evitar ações se vários cliques se o cartão já estiver aberto ou se já houver 2 cartões abertos
     if (this.classList.contains("boxOpen") || openCards.length >= 2) {

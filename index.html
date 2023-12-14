@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/styles/reset.css">
-    <link rel="stylesheet" href="./src/styles/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
     <title>Jogo Da Memória</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="score">
-        <span>Top 3:</span>
-        <p id="pontuacao"></p>
-        <ul id="score-list"></ul>
-    </div>
-    
-    <div class="container">
-        <h2>JOGO DA MEMÓRIA</h2>
-        <div class="game"></div>
-        <button class="reset"
-        onclick="window.location.reload()">
-        RESET GAME
-    </button>
+      <span>Top 3:</span>
+      <p id="pontuacao"></p>
+      <ul id="score-list"></ul>
     </div>
 
-  
+    <div class="container">
+      <h2>JOGO DA MEMÓRIA</h2>
+      <div class="game"></div>
+      <button class="reset" id="resetButton" onclick="resetGame()">
+        RESET GAME
+      </button>
+    </div>
+
     <script src="src/scripts/engine.js" defer></script>
-</body>
+  </body>
 </html>
