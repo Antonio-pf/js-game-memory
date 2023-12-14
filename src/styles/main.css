@@ -140,7 +140,8 @@ h2 {
     }
 
     .item {
-        font-size: 2em; 
+        width: calc(25% - 20px); /* Ajustando a largura para ocupar 25% da largura com um gap de 10px */
+        font-size: 2em;
     }
 
     .score {
