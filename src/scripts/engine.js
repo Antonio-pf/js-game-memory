@@ -21,6 +21,7 @@ let numberOfAttempts = 0;
 
 function initialize() {
     createCards();
+    updateScoreList();
     setTimeout(() => {
         document.querySelectorAll(".item").forEach(card => {
             card.classList.remove("boxOpen");
@@ -78,18 +79,30 @@ const checkMatch = function() {
     }
 }
 
-function rankingScore(attempts) {
-    const previousScore = localStorage.getItem('score');
+const rankingScore = function (attempts) {
+    let scores = JSON.parse(localStorage.getItem('scores')) || [];
 
-    console.log(previousScore);
+    scores.push(attempts);
+    scores.sort((a, b) => a - b); // Classifica em ordem crescente
 
-    if (previousScore) {
-        if (attempts < parseInt(previousScore, 10)) {
-            localStorage.setItem('score', attempts.toString());
-            document.getElementById("pontuacao").innerHTML = "Pontuação: " + localStorage.getItem('score');
-        }
-    }
+    scores = scores.slice(0, 3);
+
+    localStorage.setItem('scores', JSON.stringify(scores));
+
+    updateScoreList();
 }
 
+const updateScoreList = function() {
+    const scoreList = document.getElementById("score-list");
+    const scores = JSON.parse(localStorage.getItem('scores')) || [];
+
+    scoreList.innerHTML = "";
+
+    scores.forEach((score, index) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `#${index + 1}: ${score} tentativas`;
+        scoreList.appendChild(listItem);
+    });
+}
 
 initialize();
