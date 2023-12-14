@@ -50,8 +50,9 @@ h2 {
 }
 
 .game {
-    width: 430px;
-    height: 430px;
+    width: 100%;
+    max-width: 430px;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -95,13 +96,14 @@ h2 {
 
 .score {
     border: 2px solid rgb(4, 4, 4);
-    width: 13em;
+    width: 100%; 
+    max-width: 13em; 
     height: 10em;
     position: fixed;
     top: 0;   
     right: 0; 
-    background-color: #d8e7e7; /* Adicione uma cor de fundo se desejar */
-    padding: 10px; /* Adicione padding se desejar */
+    background-color: #d8e7e7; 
+    padding: 10px; 
     margin: 10px;
     box-shadow: 5px 5px 5px;
     border-radius: 5%;
@@ -126,4 +128,22 @@ h2 {
     margin-top: 10px;
     text-transform: uppercase;
     font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px; 
+    }
+
+    .game {
+        max-width: 100%;
+    }
+
+    .item {
+        font-size: 2em; 
+    }
+
+    .score {
+        max-width: none; 
+    }
 }
