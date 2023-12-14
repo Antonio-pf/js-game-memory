@@ -22,6 +22,10 @@ let numberOfAttempts = 0;
 function initialize() {
     createCards();
     updateScoreList();
+    startGameWithOpenCards();
+}
+
+const startGameWithOpenCards = function() {
     setTimeout(() => {
         document.querySelectorAll(".item").forEach(card => {
             card.classList.remove("boxOpen");
