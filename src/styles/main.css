@@ -105,7 +105,7 @@ h2 {
     background-color: #d8e7e7; 
     padding: 10px; 
     margin: 10px;
-    box-shadow: 5px 5px 5px;
+    box-shadow: 5px 5px 10px;
     border-radius: 5%;
 }
 
@@ -131,8 +131,22 @@ h2 {
 }
 
 @media (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+
     .container {
-        padding: 20px; 
+        padding: 2em; 
+        margin-top: 2em; 
+        width: 90%;
+        height: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .container h2 {
+        font-size: 2.1em;
     }
 
     .game {
@@ -140,11 +154,15 @@ h2 {
     }
 
     .item {
-        width: calc(25% - 20px); /* Ajustando a largura para ocupar 25% da largura com um gap de 10px */
-        font-size: 2em;
+        width: calc(25% - 10px);
+        font-size: 2.5em; 
     }
 
     .score {
-        max-width: none; 
+        position: relative;
+        width: 80%;
+        text-align: center;
     }
 }
+
+  
