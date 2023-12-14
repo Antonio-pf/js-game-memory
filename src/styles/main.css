@@ -82,10 +82,7 @@ h2 {
     transform: rotateY(0deg);
     backface-visibility: hidden;
     border-radius: 5%;
-}    <div class="score">
-<span>Melhores tentativas:</span>
-<p id="pontuacao"></p>
-</div> 
+}   
 
 .item.boxOpen{
     transform: rotateY(0deg);
